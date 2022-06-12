@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Package: logger.
+Created-By: Denys
+Main-Class: logger.Main
+

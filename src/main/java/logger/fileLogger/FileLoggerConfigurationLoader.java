@@ -8,12 +8,16 @@ import java.io.IOException;
 public class FileLoggerConfigurationLoader {
     private FileLoggerConfiguration fileLoggerConfiguration;
 
-    public FileLoggerConfiguration load() throws IOException {
+    public FileLoggerConfiguration load(String path) throws IOException {
         fileLoggerConfiguration = new FileLoggerConfiguration();
         FileInputStream fileInputStream = new FileInputStream(FileLoggerConfiguration.getPathToFile());
         int i;
-        while ((i = fileInputStream.read()) != -1) {
+        try {
+            while ((i = fileInputStream.read()) != -1) {
 
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return fileLoggerConfiguration;
     }

@@ -1,4 +1,5 @@
-import logger.Logger;
+package logger;
+
 import logger.fileLogger.FileLogger;
 import logger.fileLogger.FileLoggerConfigurationLoader;
 import logger.fileLogger.FileMaxSizeReachedException;
@@ -11,6 +12,6 @@ public class Main {
         logger.debug("some message");
         logger.info("some message 3");
         FileLoggerConfigurationLoader fileLoggerConfigurationLoader = new FileLoggerConfigurationLoader();
-        fileLoggerConfigurationLoader.load();
+        fileLoggerConfigurationLoader.load("src/main/resources/config.ini");
     }
 }
